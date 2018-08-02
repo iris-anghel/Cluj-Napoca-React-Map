@@ -6,12 +6,14 @@ class ClujMap extends Component {
     render() {
      
         const icon = 'http://maps.google.com/mapfiles/ms/icons/coffeehouse.png'
+        // add bounds
 
         return (
             <Map
                 google={this.props.google}
                 initialCenter={ {lat: 46.770331, lng: 23.5852034} }
                 zoom={15}
+                // bounds={bounds} asta doar sa extinzi points - must add points
             >
 
             </Map>
