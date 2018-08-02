@@ -27,9 +27,11 @@ class App extends Component {
                 </header>
             
                 <main>
-                    <ClujMap
+                    <ErrorBoundary>
+                        <ClujMap
 
-                    />
+                        />
+                    </ErrorBoundary>
                 </main>
 
             </div>
