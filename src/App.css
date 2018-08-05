@@ -1,16 +1,142 @@
+
 /* .App {
-
-} */
-
-.app-header {
-    background-color: #222;
-    height: 10%;
-    padding: 2%;
-    color: white;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
 }
 
-.app-title {
-    text-align: center;
-    font-size: 1.2em;
+main {
+    width: auto;
+    flex-grow: 1;
+} */
+
+.App {
+    height: 100%;
+}
+
+main {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(112, 43, 177);
+    /* tranform hex */
+}
+
+a:hover, 
+a:focus,
+a:visited {
+    text-decoration: none;
+    color: rgb(107, 26, 182);
+}
+
+
+.locations-toggle {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 101;
+    height: 50px;
+    width: 50px;
+    background: url(assets/search.svg);
+    border: none;
+    cursor: pointer;
+    /* -webkit-user-select: none;
+    user-select: none; */
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    max-width: 300px;
+    height: 100%;
+    z-index: 100;
+    position: absolute;
+    /* top: 0;  */
+    /* left: 0; */
+    /* left: -300px; */
+    transform: translateX(-300px);
+    /* transform: translate(-300px, 0); */
+    transition: .3s ease all;
+    /* transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0); */
+    padding: 60px 10px 20px;
+    background-color: #e9e5dc;
+    display: flex;
+    flex-direction: column;
+} 
+
+.sidebar-open {
+    transform: translateX(-300px);
+    transition: .3s ease all;
+} 
+
+.locations-list {
+    overflow-y: scroll;
+    height: 400px;
+    /* or something like this, because it is part of an out of normal flow container */
+}
+
+.locations-list li {
+    list-style-type: none;
+    margin-left: -40px;
+    padding: 5px;
+}
+
+.locations-list li:hover {
+    cursor: pointer;
+    /* change color */
+}
+
+input[type='text'] {
+    padding: 5px;
+}
+
+button[type='submit'] {
+    padding: 6px;
+    background-color: #efefef;
+    border: 1px solid #d1cfcf;
+    background-image: linear-gradient(to bottom, #f4f5f5, #dfdddd);
+}
+
+button[type='submit']:hover {
+    cursor: pointer;
+}
+
+/* skip google map - do i */
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: #252831;
+	color: #fff;
+	padding: 10px;
+	z-index: 999;
+}
+
+.skip-link:focus {
+	top: 0;
+}
+
+
+@media screen and (min-width: 600px){
+	.sidebar {
+		position: relative;
+        transform: translate(0, 0);
+        /* dispare sidebar */
+    }
+    
+	/* body {
+		display: flex;
+		flex-flow: row nowrap;
+    } */
+    
+	/* main {
+		width: auto;
+		flex-grow: 1;
+	} */
 }
 

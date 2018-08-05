@@ -1,0 +1,1246 @@
+{
+    "meta": {
+        "code": 200,
+        "requestId": "5b6409024c1f677b401a2642"
+    },
+    "response": {
+        "venues": [
+            {
+                "id": "4e4b613645dd5144016bad33",
+                "name": "Toulouse Café-Brasserie",
+                "location": {
+                    "address": "Piața Unirii nr. 12",
+                    "lat": 46.76929120562718,
+                    "lng": 23.58935528326409,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76929120562718,
+                            "lng": 23.58935528326409
+                        }
+                    ],
+                    "distance": 196,
+                    "postalCode": "400113",
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Piața Unirii nr. 12",
+                        "400113 Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16d941735",
+                        "name": "Café",
+                        "pluralName": "Cafés",
+                        "shortName": "Café",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "venuePage": {
+                    "id": "33853437"
+                },
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4c127d2d7f7f2d7f4065dd68",
+                "name": "Enigma Cafe",
+                "location": {
+                    "address": "Str. Iuliu Maniu nr. 12",
+                    "lat": 46.77058774780323,
+                    "lng": 23.59241868787181,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.77058774780323,
+                            "lng": 23.59241868787181
+                        }
+                    ],
+                    "distance": 78,
+                    "postalCode": "400095",
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Str. Iuliu Maniu nr. 12",
+                        "400095 Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16d941735",
+                        "name": "Café",
+                        "pluralName": "Cafés",
+                        "shortName": "Café",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "51332f99e4b02e870ce1b1cd",
+                "name": "Les Crépes & Café",
+                "location": {
+                    "address": "B-dul Eroilor nr. 3",
+                    "lat": 46.76950762016237,
+                    "lng": 23.59158532800933,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76950762016237,
+                            "lng": 23.59158532800933
+                        }
+                    ],
+                    "distance": 74,
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "B-dul Eroilor nr. 3",
+                        "Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16d941735",
+                        "name": "Café",
+                        "pluralName": "Cafés",
+                        "shortName": "Café",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4bf82bbf5efe2d7f78486a34",
+                "name": "L'atelier Cafe",
+                "location": {
+                    "address": "Str. Memorandumului nr. 9",
+                    "crossStreet": "atelier-cafe.ro",
+                    "lat": 46.76975241095234,
+                    "lng": 23.587478621861074,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76975241095234,
+                            "lng": 23.587478621861074
+                        }
+                    ],
+                    "distance": 316,
+                    "postalCode": "400114",
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Str. Memorandumului nr. 9 (atelier-cafe.ro)",
+                        "400114 Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16d941735",
+                        "name": "Café",
+                        "pluralName": "Cafés",
+                        "shortName": "Café",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "52723eaf11d21b05f1590e00",
+                "name": "POKKA Bistro & Cafe",
+                "location": {
+                    "address": "Str. Hermann Oberth nr. 1",
+                    "lat": 46.76914791432574,
+                    "lng": 23.59302086935778,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76914791432574,
+                            "lng": 23.59302086935778
+                        }
+                    ],
+                    "distance": 159,
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Str. Hermann Oberth nr. 1",
+                        "Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d1c1941735",
+                        "name": "Mexican Restaurant",
+                        "pluralName": "Mexican Restaurants",
+                        "shortName": "Mexican",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/mexican_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "venuePage": {
+                    "id": "77366184"
+                },
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "50c2309de4b069afe235538c",
+                "name": "Boulevard Cafe",
+                "location": {
+                    "address": "Str. Eroilor nr. 27",
+                    "crossStreet": "Str. Napoca",
+                    "lat": 46.770027002247396,
+                    "lng": 23.594004806000456,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.770027002247396,
+                            "lng": 23.594004806000456
+                        }
+                    ],
+                    "distance": 185,
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Str. Eroilor nr. 27 (Str. Napoca)",
+                        "Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d121941735",
+                        "name": "Lounge",
+                        "pluralName": "Lounges",
+                        "shortName": "Lounge",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/default_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "50f50b07e4b012b1176dc932",
+                "name": "Boulevard Cafe & Bistro",
+                "location": {
+                    "lat": 46.76998067121052,
+                    "lng": 23.59374890718054,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76998067121052,
+                            "lng": 23.59374890718054
+                        }
+                    ],
+                    "distance": 167,
+                    "cc": "RO",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d1e0931735",
+                        "name": "Coffee Shop",
+                        "pluralName": "Coffee Shops",
+                        "shortName": "Coffee Shop",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/coffeeshop_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "5b238f05a795bd002c7892aa",
+                "name": "Interieur Cafe",
+                "location": {
+                    "address": "Str. Ioan Rațiu",
+                    "lat": 46.76867,
+                    "lng": 23.588252,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76867,
+                            "lng": 23.588252
+                        }
+                    ],
+                    "distance": 304,
+                    "postalCode": "400014",
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Str. Ioan Rațiu",
+                        "400014 Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16d941735",
+                        "name": "Café",
+                        "pluralName": "Cafés",
+                        "shortName": "Café",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "55e1aeca498e5a2bfc074a63",
+                "name": "Teo's Cafe",
+                "location": {
+                    "address": "Str. Memorandumului, nr. 26",
+                    "lat": 46.76886947563379,
+                    "lng": 23.585403528788223,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76886947563379,
+                            "lng": 23.585403528788223
+                        }
+                    ],
+                    "distance": 492,
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Str. Memorandumului, nr. 26",
+                        "Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16d941735",
+                        "name": "Café",
+                        "pluralName": "Cafés",
+                        "shortName": "Café",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4e58e94ed22dfba6f46bcd88",
+                "name": "Decanat Cafe",
+                "location": {
+                    "address": "George Baritiu nr.27",
+                    "lat": 46.77191040394221,
+                    "lng": 23.584937875458216,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.77191040394221,
+                            "lng": 23.584937875458216
+                        }
+                    ],
+                    "distance": 541,
+                    "postalCode": "400027",
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "George Baritiu nr.27",
+                        "400027 Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d1e0931735",
+                        "name": "Coffee Shop",
+                        "pluralName": "Coffee Shops",
+                        "shortName": "Coffee Shop",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/coffeeshop_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "5236d07b498ea78a232ca8bb",
+                "name": "Riviera Narghilea Cafe",
+                "location": {
+                    "address": "Memorandului",
+                    "lat": 46.76971632619849,
+                    "lng": 23.587497895037448,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76971632619849,
+                            "lng": 23.587497895037448
+                        }
+                    ],
+                    "distance": 315,
+                    "cc": "RO",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Memorandului",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d121941735",
+                        "name": "Lounge",
+                        "pluralName": "Lounges",
+                        "shortName": "Lounge",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/default_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4bd56d3acfa7b713bfba25da",
+                "name": "Café Bulgakov",
+                "location": {
+                    "address": "Str. Inocențiu Micu Klein nr. 17",
+                    "lat": 46.76709044134929,
+                    "lng": 23.5883123569531,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76709044134929,
+                            "lng": 23.5883123569531
+                        }
+                    ],
+                    "distance": 424,
+                    "postalCode": "400087",
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Str. Inocențiu Micu Klein nr. 17",
+                        "400087 Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16d941735",
+                        "name": "Café",
+                        "pluralName": "Cafés",
+                        "shortName": "Café",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "venuePage": {
+                    "id": "51152152"
+                },
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4b969517f964a52065d634e3",
+                "name": "Zorki Photo Cafe",
+                "location": {
+                    "address": "Str. Ion Rațiu nr. 10",
+                    "lat": 46.76875253006966,
+                    "lng": 23.588036372309755,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76875253006966,
+                            "lng": 23.588036372309755
+                        }
+                    ],
+                    "distance": 313,
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Str. Ion Rațiu nr. 10",
+                        "Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16d941735",
+                        "name": "Café",
+                        "pluralName": "Cafés",
+                        "shortName": "Café",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4b76b981f964a520d15a2ee3",
+                "name": "Le Général Café-Pub",
+                "location": {
+                    "address": "Bd. Eroilor nr. 18",
+                    "lat": 46.769814872931285,
+                    "lng": 23.59371026133131,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.769814872931285,
+                            "lng": 23.59371026133131
+                        }
+                    ],
+                    "distance": 167,
+                    "postalCode": "400129",
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Bd. Eroilor nr. 18",
+                        "400129 Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d11b941735",
+                        "name": "Pub",
+                        "pluralName": "Pubs",
+                        "shortName": "Pub",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "venuePage": {
+                    "id": "47066372"
+                },
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "58f78e1da9fe124af2d18a26",
+                "name": "Rhédey Café",
+                "location": {
+                    "address": "Piata Unirii",
+                    "lat": 46.76895087980396,
+                    "lng": 23.589853576282053,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76895087980396,
+                            "lng": 23.589853576282053
+                        }
+                    ],
+                    "distance": 189,
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Piata Unirii",
+                        "Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16d941735",
+                        "name": "Café",
+                        "pluralName": "Cafés",
+                        "shortName": "Café",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "551e6261498e71559f7da70a",
+                "name": "Le petit Paris cafe",
+                "location": {
+                    "address": "Bulevardul Eroilor",
+                    "lat": 46.77001172031435,
+                    "lng": 23.593764809933333,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.77001172031435,
+                            "lng": 23.593764809933333
+                        }
+                    ],
+                    "distance": 167,
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Bulevardul Eroilor",
+                        "Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "52e81612bcbc57f1066b79f1",
+                        "name": "Bistro",
+                        "pluralName": "Bistros",
+                        "shortName": "Bistro",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/default_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4c3609c393db0f478e5f1d92",
+                "name": "Opera Food & Cafe",
+                "location": {
+                    "address": "Piața Ștefan cel Mare nr. 18",
+                    "lat": 46.77027535288558,
+                    "lng": 23.596874142027048,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.77027535288558,
+                            "lng": 23.596874142027048
+                        }
+                    ],
+                    "distance": 403,
+                    "postalCode": "400081",
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Piața Ștefan cel Mare nr. 18",
+                        "400081 Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d1c4941735",
+                        "name": "Restaurant",
+                        "pluralName": "Restaurants",
+                        "shortName": "Restaurant",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/default_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4dca59c1d4c07b35011376b0",
+                "name": "Terasa Cafe Eroilor",
+                "location": {
+                    "address": "Bd. Eroilor",
+                    "lat": 46.76958500038345,
+                    "lng": 23.591656688949723,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76958500038345,
+                            "lng": 23.591656688949723
+                        }
+                    ],
+                    "distance": 66,
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Bd. Eroilor",
+                        "Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16d941735",
+                        "name": "Café",
+                        "pluralName": "Cafés",
+                        "shortName": "Café",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4ea59dc5a17c50a15d1977ae",
+                "name": "Cafe Papillon",
+                "location": {
+                    "address": "Str. Emil Isac nr. 9",
+                    "lat": 46.76988931591505,
+                    "lng": 23.58504615540587,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76988931591505,
+                            "lng": 23.58504615540587
+                        }
+                    ],
+                    "distance": 499,
+                    "postalCode": "400023",
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Str. Emil Isac nr. 9",
+                        "400023 Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d116941735",
+                        "name": "Bar",
+                        "pluralName": "Bars",
+                        "shortName": "Bar",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "53c3faee498eabbb5a33b52f",
+                "name": "elisabeth city cafe",
+                "location": {
+                    "lat": 46.769622802734375,
+                    "lng": 23.59233283996582,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.769622802734375,
+                            "lng": 23.59233283996582
+                        }
+                    ],
+                    "distance": 84,
+                    "cc": "RO",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d116941735",
+                        "name": "Bar",
+                        "pluralName": "Bars",
+                        "shortName": "Bar",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4fd8dfa3e4b0e42684705d76",
+                "name": "Cafe Bar Narghila",
+                "location": {
+                    "address": "Hermann Oberth",
+                    "lat": 46.76954,
+                    "lng": 23.59323,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76954,
+                            "lng": 23.59323
+                        }
+                    ],
+                    "distance": 144,
+                    "cc": "RO",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Hermann Oberth",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d119941735",
+                        "name": "Hookah Bar",
+                        "pluralName": "Hookah Bars",
+                        "shortName": "Hookah Bar",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/hookahbar_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4cdc58bb9dd55941ff87dc2e",
+                "name": "Legends Bar & Café",
+                "location": {
+                    "address": "Str. Septimiu Albini nr. 10",
+                    "lat": 46.770516027164184,
+                    "lng": 23.609046259804103,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.770516027164184,
+                            "lng": 23.609046259804103
+                        }
+                    ],
+                    "distance": 1332,
+                    "postalCode": "400457",
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Str. Septimiu Albini nr. 10",
+                        "400457 Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d116941735",
+                        "name": "Bar",
+                        "pluralName": "Bars",
+                        "shortName": "Bar",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4cdfd477825e721edc217345",
+                "name": "Café Mozart",
+                "location": {
+                    "address": "Str. Pavlov, nr. 7",
+                    "lat": 46.77032882704054,
+                    "lng": 23.58323996863179,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.77032882704054,
+                            "lng": 23.58323996863179
+                        }
+                    ],
+                    "distance": 635,
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Str. Pavlov, nr. 7",
+                        "Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16d941735",
+                        "name": "Café",
+                        "pluralName": "Cafés",
+                        "shortName": "Café",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4e1b25ba183850770fd0b46a",
+                "name": "Caro Central Cafe",
+                "location": {
+                    "address": "Piața Muzeului",
+                    "lat": 46.77184121646896,
+                    "lng": 23.58751655466925,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.77184121646896,
+                            "lng": 23.58751655466925
+                        }
+                    ],
+                    "distance": 360,
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Piața Muzeului",
+                        "Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d116941735",
+                        "name": "Bar",
+                        "pluralName": "Bars",
+                        "shortName": "Bar",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4cd423a004c2236a3e3ad1c7",
+                "name": "Solas Cafe",
+                "location": {
+                    "address": "Str. Piezișă nr. 16",
+                    "lat": 46.76380130801904,
+                    "lng": 23.57688772855973,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76380130801904,
+                            "lng": 23.57688772855973
+                        }
+                    ],
+                    "distance": 1326,
+                    "postalCode": "400371",
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Str. Piezișă nr. 16",
+                        "400371 Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d11b941735",
+                        "name": "Pub",
+                        "pluralName": "Pubs",
+                        "shortName": "Pub",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "509eb158e4b0ab1753970cc8",
+                "name": "McCafé",
+                "location": {
+                    "address": "Piața Mihai Viteazul, nr. 1",
+                    "lat": 46.774032211949816,
+                    "lng": 23.5925143323775,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.774032211949816,
+                            "lng": 23.5925143323775
+                        }
+                    ],
+                    "distance": 434,
+                    "postalCode": "400036",
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Piața Mihai Viteazul, nr. 1",
+                        "400036 Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d1e0931735",
+                        "name": "Coffee Shop",
+                        "pluralName": "Coffee Shops",
+                        "shortName": "Coffee Shop",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/coffeeshop_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4f93070be4b08038d7946f63",
+                "name": "Retreat Cafe",
+                "location": {
+                    "address": "Cardinal Iuliu Hossu St",
+                    "lat": 46.768251353892985,
+                    "lng": 23.591110337644587,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.768251353892985,
+                            "lng": 23.591110337644587
+                        }
+                    ],
+                    "distance": 217,
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Cardinal Iuliu Hossu St",
+                        "Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d116941735",
+                        "name": "Bar",
+                        "pluralName": "Bars",
+                        "shortName": "Bar",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/nightlife\/pub_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4fc9ae8be4b0efceb306def5",
+                "name": "Le Cafe",
+                "location": {
+                    "address": "Universitatii",
+                    "lat": 46.76754858110244,
+                    "lng": 23.59012551357148,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.76754858110244,
+                            "lng": 23.59012551357148
+                        }
+                    ],
+                    "distance": 313,
+                    "cc": "RO",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Universitatii",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16d941735",
+                        "name": "Café",
+                        "pluralName": "Cafés",
+                        "shortName": "Café",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "588f860dbbd6d163377f22e4",
+                "name": "Urania Café",
+                "location": {
+                    "address": "Str. Horea , nr.4",
+                    "lat": 46.77496426234833,
+                    "lng": 23.587627373040277,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.77496426234833,
+                            "lng": 23.587627373040277
+                        }
+                    ],
+                    "distance": 611,
+                    "postalCode": "400000",
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Str. Horea , nr.4",
+                        "400000 Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16d941735",
+                        "name": "Café",
+                        "pluralName": "Cafés",
+                        "shortName": "Café",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            },
+            {
+                "id": "4d92f59df10ea093faf91d1e",
+                "name": "After Eight Café",
+                "location": {
+                    "lat": 46.77301505569993,
+                    "lng": 23.59297176595768,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 46.77301505569993,
+                            "lng": 23.59297176595768
+                        }
+                    ],
+                    "distance": 332,
+                    "cc": "RO",
+                    "city": "Cluj-Napoca",
+                    "state": "Cluj",
+                    "country": "Romania",
+                    "formattedAddress": [
+                        "Cluj-Napoca",
+                        "Romania"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d16d941735",
+                        "name": "Café",
+                        "pluralName": "Cafés",
+                        "shortName": "Café",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1533282562",
+                "hasPerk": false
+            }
+        ]
+    }
+}
