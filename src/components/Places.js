@@ -4,59 +4,56 @@ import React, { Component } from 'react'
 class Places extends Component {
 
     state = {
-        showingSidebar: false,
-        searchInput: ''
+        showingSidebar: false
+        // searchInput: ''
     }
 
-    onSidebarToggle = () =>
+    onSidebarToggle = () => {
         this.setState({
             showingSidebar: !this.state.showingSidebar
         })
+    }
 
     // change state with new query
-    updateQuery = (searchInput) => {
-        this.setState(
-            {searchInput: searchInput}
-        )
-        // this.props.filteredLocations(searchInput);
-    } // tre sa filtreze prin locatii 
+    // updateQuery = (searchInput) => {
+    //     this.setState(
+    //         {searchInput: searchInput}
+    //     )
+    // } 
 
-    clearQuery = () => {
-        this.setState(
-            {searchInput: ''}
-        )
-    } // asta nu l/am folosit inca
+    
+   
+   
 
     render() {
 
-        const { filteredLocations, searchInput, onLocationClick } = this.props
+        const { filteredLocations, searchInput, onLocationClick, updateQuery } = this.props
         let list = filteredLocations.map((location, i) => {
             return (
                 <li
                     key={i}
                     onClick={onLocationClick}
+                    role='link'
+                    tabIndex='0'
                     // onClick={e => onLocationClick(location.name)}
                 >
                     {/* {location.title} */}
                     {location.name}
-                    {/* asa era la myReads */}
-                    {/* this.state.shownBooks.map((shownBooks) => {
-                            shownBooks.shelf = "none"
-                            this.props.books.map((book) => {
-                                shownBooks.id === book.id ? shownBooks.shelf = book.shelf : ""}
-                            )
-                    }) */}
                 </li>
             )
         })
     
         return (
             <div>
+                {/* toggle the sidebar with the list */}
                 <button 
                     className='locations-toggle'
                     onClick={this.onSidebarToggle}
+                    tabIndex='0'
+                    aria-label='toggle locations list icon'
                 >
                 </button>
+                {/* conditionally render the sidebar based on state and className */}
                 <div className={(this.state.showingSidebar)? "sidebar" : "sidebar-open"}>
                     <h3>Cluj-Napoca</h3>
                     <div> 
@@ -64,12 +61,14 @@ class Places extends Component {
                             type='text'
                             placeholder='Filter locations'
                             name='searchInput'
+
+                            role='searchbox'
+                            aria-label='filter locations'
+                            tabIndex='0'
+
                             value={searchInput}
-                            // onClick={updateQuery}
-                            onChange={e => this.updateQuery(e.target.value)}
+                            onChange={e => updateQuery(e.target.value)}
                         />
-                        <button type='submit'>Go</button>
-                        {/* nu are nimic atasat */}
                     </div>
                     <div>
                         <ul className='locations-list'>
