@@ -57,7 +57,13 @@ class App extends Component {
         const url='https://api.foursquare.com/v2/venues/search?ll=46.770181,23.591578&query=cafe&client_id=WM2CEFFDGO2FX21ZHBVYJ5PW3SIKG3ZRU1SL3MOYHWY0U5U5&client_secret=Q24SH4OINAB3F1KVPQT2545GP2THKXCZSP2C4553JLMIECQI&v=20180803';
         
         fetch(url)
-            .then(response => response.json())
+            .then(response => {
+                if(response.ok) {
+                    return response.json()
+                } else {
+                    throw new Error(response.dataText)
+                }
+            })
             .then(data => {    
                 let locations = data.response.venues;
             this.setState({ locations });
@@ -77,40 +83,82 @@ class App extends Component {
     }
 
     // animate the marker & open InfoWindow for the selected location
-    onLocationClick = () => {
-        this.setState(
-            {showingInfoWindow: true}
-        )
-    } 
+    // onLocationClick =  (props, marker) => {
+    //     this.setState(
+    //         {
+    //             selectedPlace: props,
+    //             activeMarker: marker,
+    //             showingInfoWindow: true
+    //         }
+    //     )
+    // }
+
+	  onLocationClick = (e) => {
+    let clickedMarker = [...document.querySelectorAll('.gmnoprint')]
+
+    if (document.querySelector('.Map-container')) {
+      clickedMarker.find(m => m.title === e).click()
+    } else {
+      alert('error')
+    }
+  }
+   
+   /*  onLocationClick = (event, selectedPlace) => {
+        console.log(event.target)
+        
+    } */
+
+    
+
+        // document.querySelector('.locations-list').addEventListener('click')
+        // google.maps.event.trigger( activeMarker[i], 'click' );
+
+    
+
+    //   onLocationClick = (target) => {
+    //     // Save name of the location
+    //     let place = target.innerText
+    //     // Connect locations' list with a marker and show info window
+    //     this.setState({
+    //       selectedPlace: this.refs[place].props,
+    //       selectedMarker: this.refs[place].marker, 
+    //       showingInfoWindow: true
+    //     })
+    //   }
+    
+    
+
+
+    // filter the locations list
+    // updateQuery = (searchInput) => {
+    //     this.setState({ searchInput });
+    
+    //     if (searchInput) {
+    //         // make it case insensitive
+    //         const match = new RegExp(escapeRegExp(searchInput), "i");
+    //         let filteredLocations = this.state.locations.filter(location =>
+    //             match.test(location.name)
+    //         );
+    //         if (searchInput.length === 0) {
+    //             this.setState({ filteredLocations: this.state.locations });
+    //         } else {
+    //             this.setState({ filteredLocations});
+    //         }
+    //     } else {
+    //         this.setState({ filteredLocations: this.state.locations });
+    //     }
+    // };
 
     updateQuery = (searchInput) => {
-        this.setState({ searchInput });
+        this.setState({searchInput: searchInput})
+      }
     
-        if (searchInput) {
-            const match = new RegExp(escapeRegExp(searchInput), "i");
-            let filteredLocations = this.state.locations.filter(location =>
-                match.test(location.name)
-            );
-            if (searchInput.length === 0) {
-                this.setState({ filteredLocations: this.state.locations });
-            } else {
-                this.setState({ filteredLocations});
-    
-                // if (filteredLocations.length === 1) {
-                //     // call location click
-                // }
-            }
-        } else {
-            this.setState({ filteredLocations: this.state.locations });
-        }
-    };
-
 
     render() {
 
         const {searchInput, locations} = this.state
 
-        // do something with this - i still need it - why?
+        // do something with this
         let filteredLocations
         if (searchInput) {
             const match = new RegExp(escapeRegExp(searchInput), 'i')
@@ -122,9 +170,7 @@ class App extends Component {
 
         return (
             <div className="App">
-                
-            
-                <main>
+                {/* <main> */}
                     <ErrorBoundary>
                         <ClujMap
                             // locations={this.state.locations}
@@ -141,14 +187,13 @@ class App extends Component {
                             filteredLocations={filteredLocations}
                             selectedPlace={this.state.selectedPlace}
                             activeMarker={this.state.activeMarker}
-                            //  de astea 2 nu is sigura
                             updateQuery={this.updateQuery}
+                            // astea 2 nust
                             onLocationClick={this.onLocationClick}
                             onSidebarToggle={this.onSidebarToggle}
                         />
                     </ErrorBoundary>
-                </main>
-
+                {/* </main> */}
             </div>
         )
     }

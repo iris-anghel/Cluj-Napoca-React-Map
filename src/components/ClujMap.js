@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react'
-// https://www.npmjs.com/package/google-maps-react provides the 'GoogleApiWrapper', a  Higher-Order component for lazy-loading the map
 import flatSnazzy from './flatSnazzy.json'
 
 // turn into stateless comp if state is not moved here
@@ -9,12 +8,20 @@ class ClujMap extends Component {
      
         const { filteredLocations, onMarkerClick, selectedPlace, activeMarker, showingInfoWindow } = this.props
         // maybe add bounds
-        
+      
+        var defaultIcon = {
+            url: 'http://chart.googleapis.com/chart?chst=d_map_spin&chld=1.15|0|6B1AB6|40|_|%E2%80%A2', 
+            scaledSize: new this.props.google.maps.Size(25, 40)
+        };
+
         return (
+
+
+            <main className='Map-Container'>  
+                {/* do I need the aside for styling? */}
             <Map
                 classname='map'
                 role='application'
-
                 google={this.props.google}
                 initialCenter={{lat: 46.770181, lng: 23.591578}}
                 zoom={15}
@@ -26,11 +33,11 @@ class ClujMap extends Component {
                 {filteredLocations.map((location, i) => {
                     return (
                         <Marker 
+                            icon={defaultIcon}
                             key={i}
                             id={location.id}
                             title={location.name}
                             name={location.name}
-                            // address={location[0]}
                             address={location.location.address}
                             position={{ lat: location.location.lat, lng: location.location.lng }}
 
@@ -52,14 +59,13 @@ class ClujMap extends Component {
                     <div>
                         <h3>{selectedPlace.title}</h3>
                         <p>Address: {selectedPlace.address}</p>
-                        <p>Find out more at 
+                        <p>Info provided by  
                             <a href="https://foursquare.com" target='_blank' rel="noopener noreferrer"> Foursquare.com</a>
                         </p>
                     </div>
                 </InfoWindow>
-
             </Map>
-
+            </main>
         )
     }
 }
@@ -67,3 +73,6 @@ class ClujMap extends Component {
 export default GoogleApiWrapper({
     apiKey: 'AIzaSyDt_MPOaWNAG0N14SpXDlbnOc-c_AMcz0w'
 })(ClujMap)
+
+// comments
+// https://www.npmjs.com/package/google-maps-react provides the 'GoogleApiWrapper', a  Higher-Order component for lazy-loading the map

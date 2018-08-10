@@ -21,21 +21,21 @@ class Places extends Component {
     //     )
     // } 
 
-    
-   
-   
-
     render() {
 
         const { filteredLocations, searchInput, onLocationClick, updateQuery } = this.props
-        let list = filteredLocations.map((location, i) => {
+        let list = filteredLocations.map((location) => {
             return (
                 <li
-                    key={i}
-                    onClick={onLocationClick}
+                   // key={location.id}
+                    key={location.name}
+                    name={location.name}
+                   // onClick={onLocationClick}
+                    id={location.id}
                     role='link'
                     tabIndex='0'
-                    // onClick={e => onLocationClick(location.name)}
+                     onClick={e => onLocationClick(location.name)}
+                    // onClick={e => onLocationClick(e.target)}
                 >
                     {/* {location.title} */}
                     {location.name}
