@@ -18,7 +18,7 @@ class ClujMap extends Component {
                         lat: 46.770181,
                         lng: 23.591578}}
                     zoom={15}
-                    styles={MapStyle}
+                    styles={SnazzyMap}
                     className='map'
                     role='application'
                     // bounds={bounds} 

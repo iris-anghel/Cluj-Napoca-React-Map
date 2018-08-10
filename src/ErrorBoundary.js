@@ -14,12 +14,11 @@ class ErrorBoundary extends Component {
     render() {
         if (this.state.googleMapError) {
             // fallback UI
-            return <h1>Something went wrong loading the map</h1>;
-            // or a custom component
+            return <h2>Something went wrong loading the map. Please check the JavaScript console for more information.</h2>;
+            // or add some custom UI
         }
         return this.props.children;
       }
-
 }
 
 export default ErrorBoundary

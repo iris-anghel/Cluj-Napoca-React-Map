@@ -1,77 +1,69 @@
 import React, { Component } from 'react'
 import ErrorBoundary from './ErrorBoundary'
 import ClujMap from './components/ClujMap'
-import Places from './components/Places'
+import SidebarMenu from './components/SidebarMenu'
 import escapeRegExp from 'escape-string-regexp'
 import './App.css'
 
 class App extends Component {
 
-    state = {
-        locations: [
-            // {
-            //     id: "4bf82bbf5efe2d7f78486a34",
-            //     location: {lat: 46.76975241095234, lng: 23.587478621861074}
-            // }, // L'Atelier Cafe
-            // {
-            //     id: "4e4b613645dd5144016bad33",
-            //     location: {lat: 46.76929120562718, lng: 23.58935528326409} 
-            // }, // Tolouse Café-Brasserie
-            // { 
-            //     id: "4bd56d3acfa7b713bfba25da",
-            //     location: {lat: 46.76709044134929, lng: 23.5883123569531}
-            // }, // Café Bulgakov
-            // {
-            //     id: "4cdc58bb9dd55941ff87dc2e",
-            //     location: {lat: 46.770516027164184, lng: 23.609046259804103}
-            // }, // Legends Bar & Café
-            // {
-            //     id: "4b76b981f964a520d15a2ee3",
-            //     location: {lat: 46.769814872931285, lng: 23.59371026133131} 
-            // }, // Le Général Café-Pub
-            // {
-            //     id: "4e1b25ba183850770fd0b46a",
-            //     location: {lat: 46.77184121646896, lng: 23.58751655466925}
-            // }, // Caro Central Cafe
-            // { 
-            //     id: "4cd423a004c2236a3e3ad1c7",
-            //     location: {lat: 46.76380130801904, lng: 23.57688772855973}
-            // }, // Solas Cafe
-            // {
-            //     id: "4b969517f964a52065d634e3",
-            //     location: {lat: 46.76875253006966, lng: 23.588036372309755}
-            // } // Zorki Photo Cafe
-        ],
-     
-        showingInfoWindow: false,
-        // showingSidebar: false,
-        activeMarker: {},
-        selectedPlace: {},
-        searchInput: ''
-    } 
+    constructor(props) {
+        super(props)
+        this.state = {
+            showingInfoWindow: false,
+            activeMarker: {},
+            selectedPlace: {},
+            items: [],
+            active: false
+        }
+    }
     
+    componentDidMount = () => {
+        this.getVenues()
+        this.toggleSidebar()
+        window.gm_authFailure = this.gm_authFailure
+    }
+
     // fetching the locations from Foursquare, with the query='cafe'
     // the response with the venues was saved in the file 'response.json'
-    componentDidMount() {
+    getVenues = () => {
+        fetch('https://api.foursquare.com/v2/venues/search?ll=46.770181,23.591578&query=cafe&client_id=WM2CEFFDGO2FX21ZHBVYJ5PW3SIKG3ZRU1SL3MOYHWY0U5U5&client_secret=Q24SH4OINAB3F1KVPQT2545GP2THKXCZSP2C4553JLMIECQI&v=20180803')
+        .then(response => {
+            if(response.ok) {
+                return response.json()
+            } else {
+                throw new Error(`Request rejected with status ${response.status}`);
+            }
+        })
+        .then(items => {
+              this.setState({ items: items.response.venues });
+        }).catch(error => {
+          console.log('Foursquare ', error);
+          alert('Foursquare locations not available. Try again later or check the JavaScript console.')
+        })
+    }
 
-        const url='https://api.foursquare.com/v2/venues/search?ll=46.770181,23.591578&query=cafe&client_id=WM2CEFFDGO2FX21ZHBVYJ5PW3SIKG3ZRU1SL3MOYHWY0U5U5&client_secret=Q24SH4OINAB3F1KVPQT2545GP2THKXCZSP2C4553JLMIECQI&v=20180803';
-        
-        fetch(url)
-            .then(response => {
-                if(response.ok) {
-                    return response.json()
-                } else {
-                    throw new Error(response.dataText)
-                }
-            })
-            .then(data => {    
-                let locations = data.response.venues;
-            this.setState({ locations });
-            }).catch(error => {
-                console.log('Foursquare ', error);
-                alert('Foursquare locations not available. Try again later.');
-            })  
-    } // end componentDidMount
+    // error handle when Google Maps is not loading
+    // god bless the console. gm-err-containter, gm-err-content classes found
+    gm_authFailure = () => {
+        const gmErrContainer = document.querySelector('.gm-err-container')
+        const gmErrMessageTitle = document.querySelector('.gm-err-title')
+        const gmErrMessage = document.querySelector('.gm-err-message')
+        const menu = document.querySelector('#menu')
+
+        if (gmErrContainer) {
+            menu.setAttribute('aria-hidden', 'true')
+            menu.style.display = 'none'
+            gmErrMessageTitle.innerHTML = 'Sorry, Google Maps cannot be loaded.'
+            gmErrMessage.innerHTML = 'Please check the JavaScript console for technical details.'
+        }
+    }
+
+    toggleSidebar = () => {
+        this.setState({
+            active: !this.state.active
+        })
+    }
 
     // naming (showingInfoWindow, activeMarker, selectedPlace etc) taken from google-maps-react package
     onMarkerClick = (props, marker, e) => {
@@ -79,56 +71,30 @@ class App extends Component {
             selectedPlace: props,
             activeMarker: marker,
             showingInfoWindow: true
-        })
+        });
     }
 
-    // animate the marker & open InfoWindow for the selected location
-    // onLocationClick =  (props, marker) => {
-    //     this.setState(
-    //         {
-    //             selectedPlace: props,
-    //             activeMarker: marker,
-    //             showingInfoWindow: true
-    //         }
-    //     )
-    // }
-
-	  onLocationClick = (e) => {
-    let clickedMarker = [...document.querySelectorAll('.gmnoprint')]
-
-    if (document.querySelector('.Map-container')) {
-      clickedMarker.find(m => m.title === e).click()
-    } else {
-      alert('error')
+    // update query when filtering
+    updateQuery = (query) => {
+        this.setState({ query: query.trim() })
     }
-  }
-   
-   /*  onLocationClick = (event, selectedPlace) => {
-        console.log(event.target)
-        
-    } */
 
+    clearQuery = () => {
+        this.setState({ query: '' })
+    }
+
+    // open the infoWindow and activate the marker on list click
+    // again, god bless the console for the gmnoprint class
+    onLocationClick = (e) => {
+        let clickedMarker = [...document.querySelectorAll('.gmnoprint')]
+
+        if (document.querySelector('.map-container')) {
+            clickedMarker.find(m => m.title === e).click()
+        } else {
+            this.ongetVenuesError()
+        }
+    }
     
-
-        // document.querySelector('.locations-list').addEventListener('click')
-        // google.maps.event.trigger( activeMarker[i], 'click' );
-
-    
-
-    //   onLocationClick = (target) => {
-    //     // Save name of the location
-    //     let place = target.innerText
-    //     // Connect locations' list with a marker and show info window
-    //     this.setState({
-    //       selectedPlace: this.refs[place].props,
-    //       selectedMarker: this.refs[place].marker, 
-    //       showingInfoWindow: true
-    //     })
-    //   }
-    
-    
-
-
     // filter the locations list
     // updateQuery = (searchInput) => {
     //     this.setState({ searchInput });
@@ -149,51 +115,44 @@ class App extends Component {
     //     }
     // };
 
-    updateQuery = (searchInput) => {
-        this.setState({searchInput: searchInput})
-      }
-    
-
     render() {
 
-        const {searchInput, locations} = this.state
+        const { query, items } = this.state
 
-        // do something with this
+        // filter the locations list
         let filteredLocations
-        if (searchInput) {
-            const match = new RegExp(escapeRegExp(searchInput), 'i')
-            // filter the locations array, case insensitive
-            filteredLocations = locations.filter((location) => match.test(location.name))
+        if (query && items) {
+            // make it case insensitive
+            const match = new RegExp(escapeRegExp(query), 'i')
+            filteredLocations = items.filter((item) => match.test(item.name))
         } else {
-            filteredLocations = locations
+            filteredLocations = items
         }
 
         return (
             <div className="App">
-                {/* <main> */}
-                    <ErrorBoundary>
-                        <ClujMap
-                            // locations={this.state.locations}
-                            filteredLocations={filteredLocations}
-                            showingInfoWindow={this.state.showingInfoWindow}
-                            activeMarker={this.state.activeMarker}
-                            selectedPlace={this.state.selectedPlace}
-                            onMarkerClick={this.onMarkerClick} 
-                            onLocationClick={this.state.onLocationClick}
-                        />
+                <ErrorBoundary>
+                    <SidebarMenu
+                        filteredLocations={filteredLocations}
+                        updateQuery={this.updateQuery}
+                        onLocationClick={this.onLocationClick}
+                        toggleSidebar={this.toggleSidebar}
+                        active={this.state.active}
+                    />
 
-                        <Places
-                            // locations={this.state.locations}
-                            filteredLocations={filteredLocations}
-                            selectedPlace={this.state.selectedPlace}
-                            activeMarker={this.state.activeMarker}
-                            updateQuery={this.updateQuery}
-                            // astea 2 nust
-                            onLocationClick={this.onLocationClick}
-                            onSidebarToggle={this.onSidebarToggle}
-                        />
-                    </ErrorBoundary>
-                {/* </main> */}
+                    <ClujMap
+                        filteredLocations={filteredLocations}
+                        onLocationClick={this.onLocationClick}
+                        onMarkerClick={this.onMarkerClick}
+                        selectedPlace={this.state.selectedPlace}
+                        showingInfoWindow={this.state.showingInfoWindow}
+                        activeMarker={this.state.activeMarker}
+                    />
+                </ErrorBoundary>
+
+                <footer>
+                    <p>Powered by <a href="https://cloud.google.com/maps-platform/" target='_blank' rel="noopener noreferrer" className='footer-link'> Google Maps API</a> & <a href="https://developer.foursquare.com/places-api" target='_blank' rel="noopener noreferrer" className='footer-link'> Foursquare Places API</a></p>
+                </footer>
             </div>
         )
     }
@@ -201,5 +160,6 @@ class App extends Component {
 
 export default App
 
-// 'https://api.foursquare.com/v2/venues/search?ll=46.770181,23.591578&query=cafe&client_id=WM2CEFFDGO2FX21ZHBVYJ5PW3SIKG3ZRU1SL3MOYHWY0U5U5&client_secret=Q24SH4OINAB3F1KVPQT2545GP2THKXCZSP2C4553JLMIECQI&v=20180803'
+// some help from
+// https://css-tricks.com/using-fetch/
 
