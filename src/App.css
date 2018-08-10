@@ -1,44 +1,28 @@
-
-/* .App {
-    height: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-}
-
-main {
-    width: auto;
-    flex-grow: 1;
-} */
-
-.gmnoprint img {
-    height: 20px;
-    width: 20px;
-}
-
-.App {
-    height: 100%;
-}
-
-main {
-    display: flex;
-    flex-flow: row nowrap;
-}
-
+/* links */
 a {
     text-decoration: none;
-    color: rgb(112, 43, 177);
-    /* tranform hex */
+    color: #61418D;
 }
 
 a:hover, 
 a:focus,
 a:visited {
     text-decoration: none;
-    color: rgb(107, 26, 182);
+    color: #61418D;
 }
 
+/* map */
+.map-container {
+    width: 100%;
+    height: 100%;
+}
 
-.locations-toggle {
+.map {
+    height: calc(100% - 50px);
+}
+
+/* locations menu button and list */
+#menuToggle {
     display: block;
     position: absolute;
     top: 10px;
@@ -49,99 +33,116 @@ a:visited {
     background: url(assets/search.svg);
     border: none;
     cursor: pointer;
-    /* -webkit-user-select: none;
-    user-select: none; */
 }
 
-
-/* Sidebar */
-
-.sidebar {
-    max-width: 300px;
-    height: 100%;
-    z-index: 100;
+#menu {
     position: absolute;
-    /* top: 0;  */
-    /* left: 0; */
-    /* left: -300px; */
-    transform: translateX(-300px);
-    /* transform: translate(-300px, 0); */
-    transition: .3s ease all;
-    /* transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0); */
-    padding: 60px 10px 20px;
-    background-color: #e9e5dc;
+    max-width: 300px;
+    height: 70vh;
+    margin: 70px 0;
+    padding: 30px 20px;
+    z-index: 100;
+    background-color: #61418D;
+    color: #f7f7f7;
+    list-style-type: none;
+    overflow: auto;
     display: flex;
     flex-direction: column;
-} 
-
-.sidebar-open {
-    transform: translateX(-300px);
-    transition: .3s ease all;
-} 
-
-.locations-list {
-    overflow-y: scroll;
-    height: 400px;
-    /* or something like this, because it is part of an out of normal flow container */
 }
 
-.locations-list li {
+#menu li {
     list-style-type: none;
-    margin-left: -40px;
-    padding: 5px;
+    padding: 5px 0;
 }
 
-.locations-list li:hover {
-    cursor: pointer;
-    /* change color */
-}
-
-input[type='text'] {
-    padding: 5px;
-}
-
-button[type='submit'] {
-    padding: 6px;
-    background-color: #efefef;
-    border: 1px solid #d1cfcf;
-    background-image: linear-gradient(to bottom, #f4f5f5, #dfdddd);
-}
-
-button[type='submit']:hover {
+#menu li:hover {
     cursor: pointer;
 }
 
-/* skip google map - do i */
-.skip-link {
-	position: absolute;
-	top: -40px;
-	left: 0;
-	background: #252831;
-	color: #fff;
-	padding: 10px;
-	z-index: 999;
+/* the input */
+.filter-locations {
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.skip-link:focus {
-	top: 0;
+li.venues-list {
+    margin: 5px 0;
 }
 
+li:hover {
+    cursor: pointer;
+}
 
-@media screen and (min-width: 600px){
-	.sidebar {
-		position: relative;
-        transform: translate(0, 0);
-        /* dispare sidebar */
+/* menu visibility */
+.visible {
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transform-origin: -100% 0%;
+    transform: translate(0%, 0);
+}
+
+.hidden {
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+}
+
+/* Foursquare attribution */
+.foursquare-attribution {
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+/* footer */
+footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8em;
+    z-index: 9999;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #61418D;
+    color: 	#D4C7B2;
+}
+
+a.footer-link,
+a.footer-link:focus,
+a.footer-link:visited {
+    color: #f7f7f7;
+}
+
+.footer-link:hover {
+    color: #f7f7f7;
+}
+
+/* error handling */
+.gm-err-title,
+.gm-err-message {
+    color: #61418D;
+}
+
+/* media queries */
+/* mobile */
+@media screen and (max-width: 400px) {
+    #menu {
+        margin-top: 0;
+        font-size: 0.8em;
+        max-width: 160px;
     }
-    
-	/* body {
-		display: flex;
-		flex-flow: row nowrap;
-    } */
-    
-	/* main {
-		width: auto;
-		flex-grow: 1;
-	} */
+    .app-title{
+        margin-top: 40px;
+        font-size: 20px;
+    }
+    li.venues-list {
+        max-width: 150px;
+    }
+    .filter-locations {
+        width: 90%;
+    }
 }
-
