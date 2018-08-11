@@ -71,7 +71,7 @@ class App extends Component {
             selectedPlace: props,
             activeMarker: marker,
             showingInfoWindow: true
-        });
+        })
     }
 
     // update query when filtering
@@ -91,29 +91,9 @@ class App extends Component {
         if (document.querySelector('.map-container')) {
             clickedMarker.find(m => m.title === e).click()
         } else {
-            this.ongetVenuesError()
+            // this.ongetVenuesError()
         }
     }
-    
-    // filter the locations list
-    // updateQuery = (searchInput) => {
-    //     this.setState({ searchInput });
-    
-    //     if (searchInput) {
-    //         // make it case insensitive
-    //         const match = new RegExp(escapeRegExp(searchInput), "i");
-    //         let filteredLocations = this.state.locations.filter(location =>
-    //             match.test(location.name)
-    //         );
-    //         if (searchInput.length === 0) {
-    //             this.setState({ filteredLocations: this.state.locations });
-    //         } else {
-    //             this.setState({ filteredLocations});
-    //         }
-    //     } else {
-    //         this.setState({ filteredLocations: this.state.locations });
-    //     }
-    // };
 
     render() {
 
@@ -162,4 +142,3 @@ export default App
 
 // some help from
 // https://css-tricks.com/using-fetch/
-

@@ -7,11 +7,9 @@ class ClujMap extends Component {
     render() {
      
         const { filteredLocations, onMarkerClick, selectedPlace, activeMarker, showingInfoWindow } = this.props
-        // maybe add bounds
-      
-        return (
 
-            <main className='map-Container'>  
+        return (
+            <main className='map-container'>  
                 <Map 
                     google={this.props.google}
                     initialCenter={{
@@ -21,11 +19,9 @@ class ClujMap extends Component {
                     styles={SnazzyMap}
                     className='map'
                     role='application'
-                    // bounds={bounds} 
                 >   
-
                     {/* loop over the returned locations and add markers */}
-                    {filteredLocations.map((location, i) => {
+                    {filteredLocations.map((item) => {
                         return (
                             <Marker
                                 key={item.id}
@@ -52,11 +48,11 @@ class ClujMap extends Component {
                         visible={showingInfoWindow}
                     >
                         <div>
-                            <h3>{selectedPlace.name}</h3>
-                            <p>Address: {selectedPlace.address}</p>
-                            <p className="foursquare-attribution">
-                                    Informations by
-                                    <a href="https://foursquare.com" target='_blank' rel="noopener noreferrer"> Foursquare.com</a>
+                            <h3 tabIndex='0'>{selectedPlace.name}</h3>
+                            <p tabIndex='0'>Address: {selectedPlace.address}</p>
+                            <p className='foursquare-attribution' tabIndex='0'>
+                                Informations by
+                                <a href='https://foursquare.com' target='_blank' rel="noopener noreferrer"> Foursquare.com</a>
                             </p>
                         </div>
                     </InfoWindow>
@@ -70,5 +66,4 @@ export default GoogleApiWrapper({
     apiKey: 'AIzaSyDt_MPOaWNAG0N14SpXDlbnOc-c_AMcz0w'
 })(ClujMap)
 
-// comments
 // https://www.npmjs.com/package/google-maps-react provides the 'GoogleApiWrapper', a  Higher-Order component for lazy-loading the map

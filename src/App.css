@@ -25,7 +25,7 @@ a:visited {
 #menuToggle {
     display: block;
     position: absolute;
-    top: 10px;
+    top: 50px;
     left: 10px;
     z-index: 101;
     height: 50px;
@@ -38,8 +38,8 @@ a:visited {
 #menu {
     position: absolute;
     max-width: 300px;
-    height: 70vh;
-    margin: 70px 0;
+    height: 60vh;
+    margin: 110px 0;
     padding: 30px 20px;
     z-index: 100;
     background-color: #61418D;
@@ -128,10 +128,10 @@ a.footer-link:visited {
 }
 
 /* media queries */
-/* mobile */
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 500px) {
     #menu {
-        margin-top: 0;
+        /* margin-top: 0; */
         font-size: 0.8em;
         max-width: 160px;
     }

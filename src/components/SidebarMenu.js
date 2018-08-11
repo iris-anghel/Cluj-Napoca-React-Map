@@ -12,7 +12,7 @@ class SidebarMenu extends Component {
                     key={item.name}
                     id={item.id}
                     onClick={e => onLocationClick(item.name)}
-                    role="link"
+                    role='link'
                     tabIndex='0'
                     className='venues-list'
                 >
@@ -24,19 +24,20 @@ class SidebarMenu extends Component {
         return (
             <div>
                 <button 
-                    id="menuToggle"
-                    tabIndex="0"
+                    id='menuToggle'
+                    tabIndex='0'
                     aria-label='toggle locations'
                     onClick={toggleSidebar}>
                 </button>
 
                 <ul 
-                    id="menu"
+                    id='menu'
 					// conditionally render the sidebar based on state
                     className={active ? 'hidden' : 'visible'}
                 >
+                    {/* this should be moved and restyled */}
                     <h1 className='app-title'>Cluj-Napoca</h1>
-                    <div className='filter' id="filter-input">
+                    <div>
                         <input
                             className='filter-locations'
                             type='text'
@@ -44,6 +45,7 @@ class SidebarMenu extends Component {
                             value={query}
                             onChange={e => updateQuery(e.target.value)}
                             role='searchbox'
+                            aria-label='filter-locations'
                             tabIndex='0'
                         />
                     </div>
